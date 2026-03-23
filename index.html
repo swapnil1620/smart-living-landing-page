@@ -7,18 +7,6 @@
 <meta name="description" content="Discover the best smart home gadgets in India. Save energy, automate your home, and upgrade your lifestyle with top-rated products."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
-   <!-- SEO -->
-  <meta name="description" content="Best Smart Home Products. Discover trending smart gadgets and automation tools.">
-  <meta name="keywords" content="smart home, smart gadgets, amazon deals, home automation">
-  <!-- Google Analytics -->
-  <!-- Replace G-XXXXXXXXXX with your ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4KBJHHPR3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-S4KBJHHPR3');
-  </script>
 <style>
   :root {
     --bg: #0a0f1a;
@@ -256,10 +244,17 @@
   }
 
   .product-img {
-    width: 100%; height: 200px; object-fit: cover;
+    width: 100%; height: 200px;
     background: var(--surface2);
     display: flex; align-items: center; justify-content: center;
-    font-size: 4rem;
+    font-size: 4rem; overflow: hidden;
+  }
+  .product-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .product-card:hover .product-img img {
+    transform: scale(1.05);
   }
 
   .product-body { padding: 1.25rem; }
@@ -483,15 +478,15 @@
       <!-- Product 1 -->
       <div class="product-card">
         <div class="product-badge">🔥 Bestseller</div>
-        <div class="product-img"><a href="https://m.media-amazon.com/images/I/614EN8aR+HL._SL1000_.jpg"></a></div>
+        <div class="product-img"><img src="https://m.media-amazon.com/images/I/614EN8aR+HL._SL1000_.jpg" alt="MightySkins Carbon Fiber DJI Mini 2"/></div>
         <div class="product-body">
-          <div class="product-category">Toys and Games</div>
-          <div class="product-name">MightySkins Carbon Fiber Compatible With DJI Mini 2 Portable Drone - Solid Olive</div>
-          <div class="product-desc">MightySkins Carbon Fiber Compatible With DJI Mini 2 Portable Drone - Solid Olive | Protective, Durable Textured Carbon Fiber Finish | Easy To Apply and Change Styles | Made in the USA.</div>
+          <div class="product-category">Toys & Games</div>
+          <div class="product-name">MightySkins Carbon Fiber for DJI Mini 2 Drone – Solid Olive</div>
+          <div class="product-desc">Protective, durable textured carbon fiber finish. Easy to apply and change styles. Made in the USA.</div>
           <div class="product-meta">
             <div>
-              <span class="product-price">₹7648</span>
-              <span class="product-price-old">₹10929</span>
+              <span class="product-price">₹7,648</span>
+              <span class="product-price-old">₹10,929</span>
             </div>
             <div><span class="stars">★★★★★</span><span class="rating-count">(2,341)</span></div>
           </div>
@@ -501,12 +496,12 @@
 
       <!-- Product 2 -->
       <div class="product-card">
-        <div class="product-badge">Top Rated</div>
-        <div class="product-img"><a href="https://m.media-amazon.com/images/I/519u+ln3+HL._SL1000_.jpg"></a> </div>
+        <div class="product-badge">💡 Top Rated</div>
+        <div class="product-img"><img src="https://m.media-amazon.com/images/I/519u+ln3+HL._SL1000_.jpg" alt="EMO Go Home AI Desktop Pet Robot"/></div>
         <div class="product-body">
           <div class="product-category">Electronics</div>
-          <div class="product-name">EMO Go Home AI Desktop Pet Robot with EMO Smart Lighting (Home Station)</div>
-          <div class="product-desc">EMO Go Home AI Desktop Pet Robot with EMO Smart Lighting (Home Station).</div>
+          <div class="product-name">EMO Go Home AI Desktop Pet Robot with Smart Lighting</div>
+          <div class="product-desc">AI desktop robot companion with EMO Smart Lighting Home Station. Reacts, talks, and entertains.</div>
           <div class="product-meta">
             <div>
               <span class="product-price">₹1,19,000</span>
@@ -520,12 +515,12 @@
 
       <!-- Product 3 -->
       <div class="product-card">
-        <div class="product-badge">RC Stunt Robot Dog</div>
-        <div class="product-img"><a href="https://m.media-amazon.com/images/I/41C42hoCc1L.jpg"></a></div>
+        <div class="product-badge">🐶 Hot Deal</div>
+        <div class="product-img"><img src="https://m.media-amazon.com/images/I/41C42hoCc1L.jpg" alt="RC Stunt Robot Dog"/></div>
         <div class="product-body">
           <div class="product-category">Toys & Games</div>
-          <div class="product-name">RC Stunt Robot Dog</div>
-          <div class="product-desc">8-Wheel RC Stunt Robot Dog 2.4GHz Remote Control Pet Dog Toy with Drift Wheels,360° Spins,Rechargeable Battery Interactive Robotic Puppy for Kids (Robot Dog Car).</div>
+          <div class="product-name">RC Stunt Robot Dog – 8-Wheel 2.4GHz</div>
+          <div class="product-desc">360° spins, drift wheels, rechargeable battery. Interactive robotic puppy for kids.</div>
           <div class="product-meta">
             <div>
               <span class="product-price">₹3,899</span>
@@ -539,12 +534,12 @@
 
       <!-- Product 4 -->
       <div class="product-card">
-        <div class="product-badge">Popular</div>
-        <div class="product-img"><a href="https://m.media-amazon.com/images/I/519u+ln3+HL._SL1000_.jpg"></a></div>
+        <div class="product-badge">🏠 Popular</div>
+        <div class="product-img"><img src="https://m.media-amazon.com/images/I/519u+ln3+HL._SL1000_.jpg" alt="NARWAL Freo X10 Pro Robot Vacuum"/></div>
         <div class="product-body">
-          <div class="product-category">NARWAL Freo X10 Pro Robot</div>
-          <div class="product-name">NARWAL Freo X10 Pro Robot 2-in-1 Vacuum and Mop</div>
-          <div class="product-desc">NARWAL Freo X10 Pro Robot 2-in-1 Vacuum and Mop, 11000Pa Suction, EdgeReach Mopping, Zero Tangle Technology, Self-Emptying with De-Tangling Side Brushes.</div>
+          <div class="product-category">Smart Home</div>
+          <div class="product-name">NARWAL Freo X10 Pro Robot Vacuum & Mop</div>
+          <div class="product-desc">11000Pa suction, EdgeReach mopping, Zero Tangle Technology, self-emptying with de-tangling brushes.</div>
           <div class="product-meta">
             <div>
               <span class="product-price">₹54,990</span>
@@ -558,12 +553,12 @@
 
       <!-- Product 5 -->
       <div class="product-card">
-        <div class="product-badge">GLUN Magic 3D LED Night Lamp</div>
-        <div class="product-img"><a href="https://m.media-amazon.com/images/I/51ADWo4ZOZL._SL1134_.jpg"></a></div>
+        <div class="product-badge">💡 Save 74%</div>
+        <div class="product-img"><img src="https://m.media-amazon.com/images/I/51ADWo4ZOZL._SL1134_.jpg" alt="GLUN Magic 3D LED Night Lamp"/></div>
         <div class="product-body">
-          <div class="product-category">Home</div>
-          <div class="product-name">GLUN Magic 3D LED Night Lamp</div>
-          <div class="product-desc">GLUN Magic 3D LED Night Lamp with Plug Smart Sensor auto On/Off and Color Change Mushroom Flowers Beautiful Illumination Home Decoration Lights for Bedroom Corridor (Multicolour) (Single Pack).</div>
+          <div class="product-category">Home Décor</div>
+          <div class="product-name">GLUN Magic 3D LED Night Lamp – Mushroom Flower</div>
+          <div class="product-desc">Smart sensor auto On/Off, color changing mushroom flower lamp. Perfect for bedroom & corridor.</div>
           <div class="product-meta">
             <div>
               <span class="product-price">₹153</span>
@@ -577,12 +572,12 @@
 
       <!-- Product 6 -->
       <div class="product-card">
-        <div class="product-badge">🚪 Smart Home</div>
-        <div class="product-img"><a href="https://m.media-amazon.com/images/I/711FYmGk20L._SL1500_.jpg"></a></div>
+        <div class="product-badge">🖼️ Home Décor</div>
+        <div class="product-img"><img src="https://m.media-amazon.com/images/I/711FYmGk20L._SL1500_.jpg" alt="SAF Golden Floral Abstract Wall Art"/></div>
         <div class="product-body">
-          <div class="product-category">Home</div>
-          <div class="product-name">SAF Golden Floral Abstract Wall Art</div>
-          <div class="product-desc">SAF Golden Floral Abstract Wall Art 3 Panel Set | Modern X-Ray Effect Flower Painting on Black Background | Elegant MDF Wall Décor for Living Room Bedroom Office (30 x 50 Inch) RPNL-84.</div>
+          <div class="product-category">Home Décor</div>
+          <div class="product-name">SAF Golden Floral Abstract Wall Art – 3 Panel Set</div>
+          <div class="product-desc">Modern X-Ray effect flower painting on black background. Elegant MDF décor for living room, bedroom & office (30×50 inch).</div>
           <div class="product-meta">
             <div>
               <span class="product-price">₹2,499</span>
