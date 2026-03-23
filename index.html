@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Living Deals</title>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- SEO -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Smart Living Deals – Best Smart Home Gadgets India</title>
+<meta name="description" content="Discover the best smart home gadgets in India. Save energy, automate your home, and upgrade your lifestyle with top-rated products."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+   <!-- SEO -->
   <meta name="description" content="Best Smart Home Products. Discover trending smart gadgets and automation tools.">
   <meta name="keywords" content="smart home, smart gadgets, amazon deals, home automation">
-
   <!-- Google Analytics -->
   <!-- Replace G-XXXXXXXXXX with your ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4KBJHHPR3"></script>
@@ -21,147 +19,662 @@
     gtag('js', new Date());
     gtag('config', 'G-S4KBJHHPR3');
   </script>
+<style>
+  :root {
+    --bg: #0a0f1a;
+    --surface: #111827;
+    --surface2: #1a2235;
+    --accent: #00e5a0;
+    --accent2: #00b8ff;
+    --accent3: #ff6b35;
+    --text: #f0f4ff;
+    --muted: #8892a4;
+    --border: rgba(255,255,255,0.07);
+    --card-bg: rgba(255,255,255,0.04);
+    --glow: 0 0 40px rgba(0,229,160,0.15);
+  }
 
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* NOISE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 1; opacity: 0.4;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background: rgba(10,15,26,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: 1.2rem;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+  }
+  .nav-logo span { color: var(--text); }
+
+  nav ul { display: flex; gap: 2rem; list-style: none; }
+  nav ul a {
+    color: var(--muted); text-decoration: none;
+    font-size: 0.9rem; font-weight: 500;
+    transition: color 0.2s;
+  }
+  nav ul a:hover { color: var(--text); }
+
+  .nav-cta {
+    background: var(--accent); color: #0a0f1a !important;
+    padding: 0.5rem 1.2rem; border-radius: 50px;
+    font-weight: 600 !important; font-size: 0.85rem !important;
+    transition: opacity 0.2s !important;
+  }
+  .nav-cta:hover { opacity: 0.85; color: #0a0f1a !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,229,160,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 80% 50%, rgba(0,184,255,0.08) 0%, transparent 60%);
+  }
+
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+  }
+
+  .badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: rgba(0,229,160,0.1); border: 1px solid rgba(0,229,160,0.3);
+    color: var(--accent); padding: 0.35rem 0.9rem; border-radius: 50px;
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 780px; }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 1.2rem;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero p {
+    font-size: 1.15rem; color: var(--muted); max-width: 520px;
+    margin: 0 auto 2rem;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  .hero-btns {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+
+  .btn-primary {
+    background: var(--accent); color: #0a0f1a;
+    padding: 0.85rem 2rem; border-radius: 50px;
+    font-weight: 700; font-size: 0.95rem; text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 30px rgba(0,229,160,0.3);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 50px rgba(0,229,160,0.5); }
+
+  .btn-secondary {
+    background: transparent; color: var(--text);
+    padding: 0.85rem 2rem; border-radius: 50px;
+    font-weight: 600; font-size: 0.95rem; text-decoration: none;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.04); }
+
+  .hero-stats {
+    display: flex; gap: 3rem; justify-content: center; margin-top: 4rem;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem; font-weight: 800; color: var(--text);
+  }
+  .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.1rem; }
+
+  /* FEATURES */
+  .section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800; letter-spacing: -1px;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-sub { color: var(--muted); font-size: 1rem; max-width: 480px; }
+
+  .features-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 3rem;
+  }
+
+  .feature-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px; padding: 2rem;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+  .feature-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0,229,160,0.2);
+    box-shadow: var(--glow);
+  }
+
+  .feature-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;
+  }
+  .feature-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+
+  /* PRODUCTS */
+  .products-section { padding: 5rem 2rem; background: var(--surface); }
+  .products-inner { max-width: 1200px; margin: 0 auto; }
+
+  .products-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+
+  .product-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px; overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+  .product-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+
+  .product-badge {
+    position: absolute; top: 12px; left: 12px;
+    background: var(--accent3); color: white;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px;
+    padding: 0.25rem 0.6rem; border-radius: 50px; z-index: 2;
+  }
+
+  .product-img {
+    width: 100%; height: 200px; object-fit: cover;
+    background: var(--surface2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 4rem;
+  }
+
+  .product-body { padding: 1.25rem; }
+
+  .product-category {
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--accent2); margin-bottom: 0.4rem;
+  }
+
+  .product-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem;
+  }
+
+  .product-desc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+
+  .product-meta {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .product-price {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem; font-weight: 800; color: var(--accent);
+  }
+  .product-price-old {
+    font-size: 0.8rem; color: var(--muted); text-decoration: line-through; margin-left: 0.4rem;
+  }
+
+  .stars { color: #fbbf24; font-size: 0.8rem; }
+  .rating-count { color: var(--muted); font-size: 0.75rem; margin-left: 0.3rem; }
+
+  .btn-amazon {
+    display: block; width: 100%; text-align: center;
+    background: #FF9900; color: #0a0f1a;
+    padding: 0.7rem; border-radius: 8px;
+    font-weight: 700; font-size: 0.9rem; text-decoration: none;
+    transition: opacity 0.2s, transform 0.1s;
+  }
+  .btn-amazon:hover { opacity: 0.9; transform: scale(1.01); }
+
+  /* HOW IT WORKS */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3rem; }
+
+  .step {
+    text-align: center; padding: 2rem 1.5rem;
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 16px; position: relative;
+  }
+
+  .step-num {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.9rem;
+    color: #0a0f1a; margin: 0 auto 1rem;
+  }
+
+  .step h3 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .step p { font-size: 0.82rem; color: var(--muted); }
+
+  /* NEWSLETTER */
+  .newsletter {
+    background: linear-gradient(135deg, rgba(0,229,160,0.1), rgba(0,184,255,0.08));
+    border: 1px solid rgba(0,229,160,0.2);
+    border-radius: 24px; padding: 3.5rem; text-align: center;
+    margin: 5rem 2rem;
+    max-width: 700px; margin-left: auto; margin-right: auto;
+  }
+
+  .newsletter h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;
+  }
+
+  .newsletter p { color: var(--muted); margin-bottom: 1.5rem; }
+
+  .email-form {
+    display: flex; gap: 0.75rem; max-width: 440px; margin: 0 auto;
+  }
+
+  .email-form input {
+    flex: 1; padding: 0.75rem 1rem; border-radius: 8px;
+    background: rgba(255,255,255,0.07); border: 1px solid var(--border);
+    color: var(--text); font-size: 0.9rem; outline: none;
+    transition: border-color 0.2s;
+  }
+  .email-form input:focus { border-color: var(--accent); }
+  .email-form input::placeholder { color: var(--muted); }
+
+  .email-form button {
+    background: var(--accent); color: #0a0f1a;
+    padding: 0.75rem 1.5rem; border-radius: 8px;
+    font-weight: 700; font-size: 0.9rem; border: none;
+    cursor: pointer; white-space: nowrap; transition: opacity 0.2s;
+  }
+  .email-form button:hover { opacity: 0.85; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem; text-align: center;
+    color: var(--muted); font-size: 0.82rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  .disclaimer {
+    background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+    border-radius: 8px; padding: 0.75rem 1rem;
+    font-size: 0.78rem; color: var(--muted); margin: 1rem auto; max-width: 700px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav ul { display: none; }
+    .features-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .hero-stats { gap: 1.5rem; }
+    .email-form { flex-direction: column; }
+  }
+  @media (max-width: 480px) {
+    .steps { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
+<body>
 
-<body class="bg-gray-100 text-gray-800">
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Smart<span>Living</span></div>
+  <ul>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#deals">Deals</a></li>
+    <li><a href="#newsletter" class="nav-cta">Get Deals</a></li>
+  </ul>
+</nav>
 
 <!-- HERO -->
-<section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">
-      Upgrade Your Home with Smart Living
-    </h1>
-    <p class="text-lg mb-6">
-      Discover trending smart gadgets used worldwide
-    </p>
-    <a href="#products" class="bg-white text-blue-600 px-6 py-3 rounded-2xl font-semibold shadow-lg">
-      Explore Products
-    </a>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="badge">🇮🇳 Best Prices in India</div>
+    <h1>Upgrade Your Home.<br/>Live <em>Smarter.</em></h1>
+    <p>Top-rated smart gadgets handpicked for Indian homes. Save energy, automate your life, and shop with confidence.</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn-primary">🛒 Shop Now</a>
+      <a href="#how" class="btn-secondary">How It Works →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Curated Products</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">₹500+</div>
+        <div class="stat-label">Average Savings</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4.5★</div>
+        <div class="stat-label">Avg. Rating</div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- FEATURES -->
-<section class="py-12">
-  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6 text-center">
-    <div class="bg-white p-6 rounded-2xl shadow">
-      <h3 class="text-xl font-bold mb-2">Smart Automation</h3>
-      <p>Control everything from your phone.</p>
+<div class="section" id="features">
+  <div class="section-tag">Why Smart Living?</div>
+  <div class="section-title">Everything Your Home<br/>Deserves</div>
+  <p class="section-sub">We handpick only the best smart gadgets — verified reviews, real savings.</p>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon" style="background:rgba(0,229,160,0.1)">📱</div>
+      <h3>App-Controlled</h3>
+      <p>Control lights, plugs, and AC from your smartphone — even when away from home.</p>
     </div>
-    <div class="bg-white p-6 rounded-2xl shadow">
-      <h3 class="text-xl font-bold mb-2">Energy Saving</h3>
-      <p>Reduce electricity bills efficiently.</p>
+    <div class="feature-card">
+      <div class="feature-icon" style="background:rgba(0,184,255,0.1)">⚡</div>
+      <h3>Energy Saving</h3>
+      <p>Smart devices can cut your electricity bill by 20–40%. Smart plugs alone save ₹1,000+/year.</p>
     </div>
-    <div class="bg-white p-6 rounded-2xl shadow">
-      <h3 class="text-xl font-bold mb-2">Modern Lifestyle</h3>
-      <p>Upgrade to a futuristic smart home.</p>
+    <div class="feature-card">
+      <div class="feature-icon" style="background:rgba(255,107,53,0.1)">🔒</div>
+      <h3>Home Security</h3>
+      <p>Smart cameras and doorbells keep you safe with real-time alerts on your phone.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon" style="background:rgba(0,229,160,0.1)">🇮🇳</div>
+      <h3>India-Ready</h3>
+      <p>All products support Indian voltage (220V), Indian apps, and Hindi voice commands.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon" style="background:rgba(0,184,255,0.1)">⭐</div>
+      <h3>Verified Reviews</h3>
+      <p>Only products with 4+ stars and 500+ reviews make our list. No filler products.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon" style="background:rgba(255,107,53,0.1)">💸</div>
+      <h3>Best Prices</h3>
+      <p>We track Amazon prices daily and only show you products with genuine discounts.</p>
     </div>
   </div>
-</section>
+</div>
 
 <!-- PRODUCTS -->
-<section id="products" class="py-12 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">
-      Top Smart Living Products
-    </h2>
+<section class="products-section" id="products">
+  <div class="products-inner">
+    <div class="section-tag">Top Picks</div>
+    <div class="section-title">Trending Smart Gadgets</div>
+    <p class="section-sub">Handpicked for Indian homes. Click any product to check current price on Amazon.</p>
+    <div class="products-grid">
 
-    <div id="product-container" class="grid md:grid-cols-3 gap-8"></div>
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-badge">🔥 Bestseller</div>
+        <div class="product-img"><a href="https://m.media-amazon.com/images/I/614EN8aR+HL._SL1000_.jpg"></a></div>
+        <div class="product-body">
+          <div class="product-category">Toys and Games</div>
+          <div class="product-name">MightySkins Carbon Fiber Compatible With DJI Mini 2 Portable Drone - Solid Olive</div>
+          <div class="product-desc">MightySkins Carbon Fiber Compatible With DJI Mini 2 Portable Drone - Solid Olive | Protective, Durable Textured Carbon Fiber Finish | Easy To Apply and Change Styles | Made in the USA.</div>
+          <div class="product-meta">
+            <div>
+              <span class="product-price">₹7648</span>
+              <span class="product-price-old">₹10929</span>
+            </div>
+            <div><span class="stars">★★★★★</span><span class="rating-count">(2,341)</span></div>
+          </div>
+          <a href="https://amzn.to/4v43pAP" target="_blank" class="btn-amazon">🛒 Buy on Amazon</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-badge">Top Rated</div>
+        <div class="product-img"><a href="https://m.media-amazon.com/images/I/519u+ln3+HL._SL1000_.jpg"></a> </div>
+        <div class="product-body">
+          <div class="product-category">Electronics</div>
+          <div class="product-name">EMO Go Home AI Desktop Pet Robot with EMO Smart Lighting (Home Station)</div>
+          <div class="product-desc">EMO Go Home AI Desktop Pet Robot with EMO Smart Lighting (Home Station).</div>
+          <div class="product-meta">
+            <div>
+              <span class="product-price">₹1,19,000</span>
+              <span class="product-price-old">₹1,99,000</span>
+            </div>
+            <div><span class="stars">★★★★☆</span><span class="rating-count">(4,102)</span></div>
+          </div>
+          <a href="https://amzn.to/4m4M32F" target="_blank" class="btn-amazon">🛒 Buy on Amazon</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-badge">RC Stunt Robot Dog</div>
+        <div class="product-img"><a href="https://m.media-amazon.com/images/I/41C42hoCc1L.jpg"></a></div>
+        <div class="product-body">
+          <div class="product-category">Toys & Games</div>
+          <div class="product-name">RC Stunt Robot Dog</div>
+          <div class="product-desc">8-Wheel RC Stunt Robot Dog 2.4GHz Remote Control Pet Dog Toy with Drift Wheels,360° Spins,Rechargeable Battery Interactive Robotic Puppy for Kids (Robot Dog Car).</div>
+          <div class="product-meta">
+            <div>
+              <span class="product-price">₹3,899</span>
+              <span class="product-price-old">₹8,999</span>
+            </div>
+            <div><span class="stars">★★★★★</span><span class="rating-count">(1,890)</span></div>
+          </div>
+          <a href="https://amzn.to/3PFgy2N" target="_blank" class="btn-amazon">🛒 Buy on Amazon</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-badge">Popular</div>
+        <div class="product-img"><a href="https://m.media-amazon.com/images/I/519u+ln3+HL._SL1000_.jpg"></a></div>
+        <div class="product-body">
+          <div class="product-category">NARWAL Freo X10 Pro Robot</div>
+          <div class="product-name">NARWAL Freo X10 Pro Robot 2-in-1 Vacuum and Mop</div>
+          <div class="product-desc">NARWAL Freo X10 Pro Robot 2-in-1 Vacuum and Mop, 11000Pa Suction, EdgeReach Mopping, Zero Tangle Technology, Self-Emptying with De-Tangling Side Brushes.</div>
+          <div class="product-meta">
+            <div>
+              <span class="product-price">₹54,990</span>
+              <span class="product-price-old">₹1,39,999</span>
+            </div>
+            <div><span class="stars">★★★★★</span><span class="rating-count">(12,450)</span></div>
+          </div>
+          <a href="https://amzn.to/4lIhnUm" target="_blank" class="btn-amazon">🛒 Buy on Amazon</a>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="product-badge">GLUN Magic 3D LED Night Lamp</div>
+        <div class="product-img"><a href="https://m.media-amazon.com/images/I/51ADWo4ZOZL._SL1134_.jpg"></a></div>
+        <div class="product-body">
+          <div class="product-category">Home</div>
+          <div class="product-name">GLUN Magic 3D LED Night Lamp</div>
+          <div class="product-desc">GLUN Magic 3D LED Night Lamp with Plug Smart Sensor auto On/Off and Color Change Mushroom Flowers Beautiful Illumination Home Decoration Lights for Bedroom Corridor (Multicolour) (Single Pack).</div>
+          <div class="product-meta">
+            <div>
+              <span class="product-price">₹153</span>
+              <span class="product-price-old">₹599</span>
+            </div>
+            <div><span class="stars">★★★★☆</span><span class="rating-count">(743)</span></div>
+          </div>
+          <a href="https://amzn.to/4lJg2gl" target="_blank" class="btn-amazon">🛒 Buy on Amazon</a>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="product-badge">🚪 Smart Home</div>
+        <div class="product-img"><a href="https://m.media-amazon.com/images/I/711FYmGk20L._SL1500_.jpg"></a></div>
+        <div class="product-body">
+          <div class="product-category">Home</div>
+          <div class="product-name">SAF Golden Floral Abstract Wall Art</div>
+          <div class="product-desc">SAF Golden Floral Abstract Wall Art 3 Panel Set | Modern X-Ray Effect Flower Painting on Black Background | Elegant MDF Wall Décor for Living Room Bedroom Office (30 x 50 Inch) RPNL-84.</div>
+          <div class="product-meta">
+            <div>
+              <span class="product-price">₹2,499</span>
+              <span class="product-price-old">₹4,999</span>
+            </div>
+            <div><span class="stars">★★★★☆</span><span class="rating-count">(987)</span></div>
+          </div>
+          <a href="https://amzn.to/4rRfw1g" target="_blank" class="btn-amazon">🛒 Buy on Amazon</a>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- EMAIL -->
-<section class="py-16 bg-white text-center">
-  <h2 class="text-2xl font-bold mb-4">Get Best Deals</h2>
-  <p class="mb-6">Subscribe for latest offers</p>
-  <input type="email" placeholder="Enter your email"
-    class="px-4 py-2 border rounded-xl w-64">
-  <button class="ml-2 px-6 py-2 bg-blue-600 text-white rounded-xl">
-    Subscribe
-  </button>
-</section>
+<!-- HOW IT WORKS -->
+<div class="section" id="how">
+  <div class="section-tag">Simple Process</div>
+  <div class="section-title">How It Works</div>
+  <p class="section-sub">Get the best smart home deals in 4 easy steps.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Browse Products</h3>
+      <p>Explore our curated list of top-rated smart gadgets</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Compare & Choose</h3>
+      <p>Check ratings, prices, and features side by side</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Buy on Amazon</h3>
+      <p>Click the Amazon button — checkout is fast and secure</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h3>Enjoy Smart Living</h3>
+      <p>Get it delivered and start automating your home!</p>
+    </div>
+  </div>
+</div>
 
-<!-- CTA -->
-<section class="py-16 bg-indigo-700 text-white text-center">
-  <h2 class="text-3xl font-bold mb-4">
-    Start Your Smart Home Journey Today
-  </h2>
-  <a href="#products"
-    class="bg-white text-indigo-700 px-6 py-3 rounded-2xl font-semibold">
-    Shop Now
-  </a>
-</section>
+<!-- NEWSLETTER -->
+<div class="newsletter" id="newsletter" id="deals">
+  <div class="section-tag">📬 Stay Updated</div>
+  <h2>Get Weekly Deals<br/>Straight to You</h2>
+  <p>Join 2,000+ smart shoppers. We send the best offers every Sunday — no spam, ever.</p>
+  <div class="email-form">
+    <input type="email" placeholder="your@email.com"/>
+    <button onclick="subscribeEmail()">Subscribe Free</button>
+  </div>
+</div>
 
 <!-- FOOTER -->
-<footer class="bg-gray-900 text-gray-300 py-6 text-center">
-  <p>© 2026 Smart Living Deals by Swapnil Pandit| Affiliate Website</p>
+<footer>
+  <div class="disclaimer">
+    ⚠️ <strong>Affiliate Disclosure:</strong> As an Amazon Associate, Smart Living Deals earns from qualifying purchases. Product prices and availability are subject to change. Last updated prices shown are approximate.
+  </div>
+  <p>© 2026 Smart Living Deals by <strong>Swapnil Pandit</strong> &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Contact</a></p>
 </footer>
 
-<!-- DYNAMIC SCRIPT -->
 <script>
-const products = [
-  {
-    name: "GLUN Magic 3D LED Night Lamp",
-    desc: "GLUN Magic 3D LED Night Lamp with Plug Smart Sensor auto On/Off and Color Change Mushroom Flowers Beautiful Illumination Home Decoration Lights for Bedroom Corridor (Multicolour) (Single Pack)",
-    image: "https://m.media-amazon.com/images/I/51ADWo4ZOZL._SL1134_.jpg",
-    link: "https://amzn.to/4dDtdx9"
-  },
-  {
-    name: "NARWAL Freo X10 Pro Robot 2-in-1 Vacuum",
-    desc: "NARWAL Freo X10 Pro Robot 2-in-1 Vacuum and Mop, 11000Pa Suction, EdgeReach Mopping, Zero Tangle Technology, Self-Emptying with De-Tangling Side Brushes",
-    image: "https://m.media-amazon.com/images/I/71gXU5u-zgL._SL1500_.jpg",
-    link: "https://amzn.to/4rK3NS5"
-  },
-  {
-    name: "Kohler Cuff Health Faucet for Toilet with Flexible Hose Pipe and Holder",
-    desc: "Kohler Cuff Health Faucet for Toilet with Flexible Hose Pipe and Holder | Ideal Toilet Jet Spray for High Water Pressure | Bathroom Jet Spray with Easy Grip Design| White, 1.2 M Hose",
-    image: "https://m.media-amazon.com/images/I/41m-kA5Bd4L._SL1500_.jpg",
-    link: "https://amzn.to/3PpF3Ba"
-  },
-  {
-    name: "MightySkins Skin Compatible with Jamstik+ Portable SmartGuitar - Vintage Paisley",
-    desc: "MightySkins Skin Compatible with Jamstik+ Portable SmartGuitar - Vintage Paisley | Protective, Durable and Unique Vinyl Stickers, Easy to Apply, Remove and Change Made",
-    image: "https://m.media-amazon.com/images/I/615zIR+w2BL._SL1000_.jpg",
-    link: "https://amzn.to/4t69Gdm"
-  },
-  {
-    name: "MightySkins Carbon Fiber Compatible With DJI Mini 2 Portable Drone - Solid Olive",
-    desc: "MightySkins Carbon Fiber Compatible With DJI Mini 2 Portable Drone - Solid Olive | Protective, Durable Textured Carbon Fiber Finish | Easy To Apply and Change Styles | Made in the USA.",
-    image: "https://m.media-amazon.com/images/I/614EN8aR+HL._SL1000_.jpg",
-    link: "https://amzn.to/4stOVbJ"
+function subscribeEmail() {
+  const input = document.querySelector('.email-form input');
+  if (!input.value || !input.value.includes('@')) {
+    input.style.borderColor = '#ff6b6b';
+    input.placeholder = 'Enter a valid email!';
+    return;
   }
-];
-
-const container = document.getElementById("product-container");
-
-products.forEach(product => {
-  const card = document.createElement("div");
-  card.className = "bg-white p-5 rounded-2xl shadow";
-
-  card.innerHTML = `
-    <img src="${product.image}" class="rounded-xl mb-4">
-    <h3 class="text-lg font-semibold mb-2">${product.name}</h3>
-    <p class="text-sm mb-3">${product.desc}</p>
-    <a href="${product.link}" target="_blank"
-      onclick="trackClick('${product.name}')"
-      class="block bg-blue-600 text-white text-center py-2 rounded-xl hover:bg-blue-700">
-      Buy on Amazon
-    </a>
-  `;
-
-  container.appendChild(card);
-});
-
-// TRACK CLICKS (IMPORTANT FOR ANALYTICS)
-function trackClick(productName) {
-  if (typeof gtag !== "undefined") {
-    gtag('event', 'click', {
-      event_category: 'Affiliate',
-      event_label: productName
-    });
-  }
+  const btn = document.querySelector('.email-form button');
+  btn.textContent = '✅ Subscribed!';
+  btn.style.background = '#00b8ff';
+  input.value = '';
+  input.placeholder = 'Thanks! Check your inbox.';
 }
-</script>
 
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.animation = 'fadeUp 0.5s ease forwards';
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.feature-card, .product-card, .step').forEach(el => {
+  el.style.opacity = '0';
+  observer.observe(el);
+});
+</script>
 </body>
 </html>
